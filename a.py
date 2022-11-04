@@ -12,4 +12,4 @@ def home():
 
 if __name__=='__main__':
     app.run(debug=True)
-    print("Test")
+    print("Test2 update")
