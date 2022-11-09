@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stack help</title>
+    <style>
+        body {
+            font-size: 18px;
+        }
+
+        header {
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            font-size: 30px;
+            color: rgb(31, 31, 50);
+            position: relative;
+            top: 10px;
+        }
+
+        header a {
+            color: rgb(31, 31, 50);
+        }
+
+        header span {
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>Stack<span>&nbsp;by <a href="#">Team Virus</a></span>&nbsp;Help</header>
+    <br><br>
+    <h2>Found a Bug?</h2>
+    <h4>Report the bug <a href="https://github.com/VasanthRyo">here</a></h4>
+    <h1>Syntax</h1>
+    <h2>Code Syntax</h2>
+    <ul>
+        <li>Each instruction will be interpreted line by line</li>
+        <li>The operation and operand are seperated by space</li>
+        <li>Operations are <strong>case-insensitive</strong></li>
+        <li>Operands are <strong>case sensitive</strong></li>
+    </ul>
+    <h2>Register Syntax</h2>
+    <ul>
+        <li>Register and its value are seperated by space</li>
+        <li>Register value can be null</li>
+        <li>
+            <strong>Example:</strong>
+            <br>
+            A
+            <br>
+            B 10
+            <br>
+            C A+B
+        </li>
+    </ul>
+    <h1>Modes</h1>
+    <ul>
+        <li>Two types of modes are there:<br>
+            <ul>
+                <li>Numeric mode</li>
+                <li>Non-numeric mode</li>
+            </ul>
+        </li>
+        <li>Numeric mode applies operation on the values.<br>
+            <strong>Example:</strong>
+            <ul>
+                <li>
+                    Register file<br>
+                    A 10<br>
+                    B 20<br>
+                    C<br>
+                </li>
+                <li>
+                    Code file<br>
+                    push A<br>
+                    push B<br>
+                    add<br>
+                    pop C<br>
+                </li>
+                <li>After code execution <strong>C = 30</strong></li>
+            </ul>
+        </li>
+        <li>Non-numeric mode applies operation on the register variables.<br>
+            <strong>Example:</strong>
+            <ul>
+                <li>
+                    Register file<br>
+                    A 10<br>
+                    B 20<br>
+                    C<br>
+                </li>
+                <li>
+                    Code file<br>
+                    push A<br>
+                    push B<br>
+                    add<br>
+                    pop C<br>
+                </li>
+                <li>After code execution <strong>C = B+A</strong></li>
+            </ul>
+        </li>
+    </ul>
+    <h1>General</h1>
+    <ul>
+        <li>Always run the register file after changing content to update the changes</li>
+        <li>Executng a code will modify the register file</li>
+
+    </ul>
+</body>
+
+</html>
