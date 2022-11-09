@@ -1,0 +1,110 @@
+* {
+    --width: 100vw;
+    --height: 100vh;
+    --stack-height: 50%;
+    --stack-width: 200px;
+    outline: none;
+}
+
+::-webkit-scrollbar{
+    width: 5px;
+    background-color: #33333330;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #77777770;
+    border-radius: 10px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    display: grid;
+    grid-template-rows: 60px 1fr;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+header {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    color: rgb(31, 31, 50);
+    left: 20px;
+    position: relative;
+}
+
+header a {
+    color: rgb(31, 31, 50);
+}
+
+header span {
+    font-size: 16px;
+}
+
+.code_editor,
+.demo {
+    width: calc(var(--width) / 2 - 60px);
+    height: calc(var(--height) - 102px);
+    margin: 20px;
+    margin-top: 0;
+    border: 1px solid #eee;
+    box-shadow: -4px 9px 15px 5px #ccc;
+    border-radius: 5px;
+    grid-row-start: 2;
+    padding: 10px;
+    font-family: monospace;
+    font-size: 20px;
+    overflow: auto;
+}
+
+.code_editor:focus {
+    box-shadow: -4px 9px 15px 5px #ddd;
+}
+
+.code_editor {
+    display: grid;
+    grid-template-rows: 40px 1fr;
+}
+
+.code_editor svg {
+    border: 1px solid #777;
+    border-radius: 2px;
+    transform: scale(1.25);
+}
+
+.code {
+    white-space: pre;
+}
+
+.settings {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+#config,
+#help {
+    font-family: inherit;
+    font-size: 16px;
+    background-color: #fff;
+    outline: none;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    padding: 4px 10px;
+}
+
+#registers {
+    display: none;
+}
+
+#canvas {
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
